@@ -1,0 +1,135 @@
+/* Container Fix (Responsive spacing) */
+.about-section {
+  padding: 80px 10%; /* Left-right 10% spacing */
+  background-color: #f8fafc;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden; /* For smooth animations */
+}
+
+/* Header Spacing */
+.about-header {
+  margin-bottom: 60px;
+}
+
+.about-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.yellow-dash {
+  width: 60px;
+  height: 4px;
+  background-color: #ffcc00;
+  margin: 0 auto 25px;
+  border-radius: 5px;
+}
+
+.about-subtitle {
+  color: #64748b;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1.15rem;
+}
+
+/* Cards Flex Container */
+.about-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Space between cards */
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+/* Individual Card (Modern Glassmorphism look) */
+.about-card {
+  background: #ffffff;
+  padding: 50px 35px;
+  border-radius: 20px;
+  width: 360px;
+  /* Soft premium shadow */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  
+  /* POSITION RELATIVE: Yeh sabse zaruri hai top-border ke liye */
+  position: relative;
+  overflow: hidden; /* Border ko card ke andar rakhne ke liye */
+  
+  /* Smooth transitions */
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.4s ease-in-out;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* --- THE HOVER TRICK (Yellow Top Border Animation) --- */
+.about-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Puri width */
+  height: 0px; /* Shuru mein height zero */
+  background-color: #ffcc00; /* Yellow color */
+  border-radius: 20px 20px 0 0; /* Card ke top corner jaisi shape */
+  
+  /* Smooth border grow animation */
+  transition: height 0.3s ease-in-out; 
+  z-index: 1; /* Taaki content se upar dikhe */
+}
+
+/* --- THE ACTIVE HOVER STATE --- */
+.about-card:hover {
+  /* 1. Card Moves Up slightly */
+  transform: translateY(-12px); 
+  
+  /* 2. Stronger shadow on hover */
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+}
+
+/* 3. Border grows to 6px on hover */
+.about-card:hover::before {
+  height: 6px; 
+}
+
+/* Card Content Fix (Taaki border top se overlap na kare) */
+.card-icon {
+  font-size: 45px;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2; /* Content top-border ke piche chupa rahe */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.card-desc {
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+  .about-section {
+    padding: 60px 5%;
+  }
+  .about-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px 25px;
+  }
+}

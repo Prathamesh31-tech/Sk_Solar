@@ -1,0 +1,66 @@
+.adani-why-section {
+  padding: 80px 10%;
+  background-color: #ffffff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.adani-why-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.adani-why-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.adani-why-subtitle {
+  font-size: 1.15rem;
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Button Wrapper */
+.adani-btn-wrapper {
+  margin-top: 20px;
+}
+
+/* Adani Blue Button Style */
+.adani-contact-now-btn {
+  background-color: #0d6efd; /* Adani Blue */
+  color: #ffffff;
+  padding: 15px 45px;
+  border: none;
+  border-radius: 50px; /* Fully Rounded Pill Shape */
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.2);
+}
+
+.adani-contact-now-btn:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(13, 110, 253, 0.35);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .adani-why-title {
+    font-size: 1.8rem;
+  }
+  .adani-why-subtitle {
+    font-size: 1rem;
+  }
+  .adani-why-section {
+    padding: 60px 20px;
+  }
+}

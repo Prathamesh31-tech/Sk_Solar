@@ -1,0 +1,64 @@
+.contact-cta-section {
+  background-color: #26b978; /* Screenshot wala exact green shade */
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+}
+
+.cta-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.cta-text {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+/* White Button Style */
+.cta-contact-btn {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 14px 45px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cta-contact-btn:hover {
+  background-color: #f8fafc;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cta-contact-btn:active {
+  transform: translateY(0);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 1.8rem;
+  }
+  .cta-text {
+    font-size: 1rem;
+  }
+  .contact-cta-section {
+    padding: 50px 15px;
+  }
+}

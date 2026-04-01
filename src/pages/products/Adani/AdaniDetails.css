@@ -1,0 +1,102 @@
+.adani-details-section {
+  padding: 80px 8%;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.adani-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Image Box --- */
+.adani-image-box {
+  flex: 1.2;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.adani-image-box img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.adani-image-box img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Info Box --- */
+.adani-info-box {
+  flex: 1;
+  text-align: left;
+}
+
+.adani-main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.adani-intro-text {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* --- Specs List --- */
+.adani-specs-list {
+  margin-bottom: 30px;
+}
+
+.adani-spec-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.adani-check {
+  color: #1e293b;
+  font-weight: bold;
+  margin-right: 12px;
+  font-size: 1.1rem;
+}
+
+.adani-text {
+  font-size: 1rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+/* --- Blue Get Quote Button --- */
+.adani-get-quote-btn {
+  background-color: #0d6efd; /* Brand Blue from screenshot */
+  color: #ffffff;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 50px; /* Fully rounded button as per screenshot */
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+.adani-get-quote-btn:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(13, 110, 253, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .adani-container { flex-direction: column; text-align: center; }
+  .adani-info-box { text-align: center; }
+  .adani-spec-item { justify-content: center; }
+}

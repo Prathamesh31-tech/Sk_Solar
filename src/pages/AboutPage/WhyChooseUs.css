@@ -1,0 +1,100 @@
+.why-choose-section {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* --- Features Section --- */
+.features-container {
+  padding: 80px 10%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 60px;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-icon {
+  font-size: 45px;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+.feature-item h3 {
+  font-size: 1.4rem;
+  color: #1e293b;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.feature-item p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* --- CTA Banner (Yellow) --- */
+.cta-banner {
+  background-color: #ffcc00; /* Exact Solar Yellow */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  color: #1e293b;
+  margin-bottom: 35px;
+  font-weight: 500;
+}
+
+/* Dark Button Style */
+.cta-btn {
+  background-color: #1a1e23; /* Dark Navy/Black */
+  color: #ffffff;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn:hover {
+  background-color: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title { font-size: 2rem; }
+  .cta-content h2 { font-size: 1.8rem; }
+  .cta-content p { font-size: 1rem; }
+  .features-container { padding: 60px 20px; }
+}

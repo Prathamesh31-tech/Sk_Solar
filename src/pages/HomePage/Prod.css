@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.products-section {
+  padding: 80px 8%;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* --- Section Header --- */
+.section-header {
+  margin-bottom: 60px;
+}
+
+.main-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.yellow-dash {
+  width: 70px;
+  height: 4px;
+  background-color: #ffcc00;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- Products Grid --- */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+/* --- Product Card Style --- */
+.product-card {
+  background: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  border: 1px solid #f1f5f9;
+}
+
+.product-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Badge Style --- */
+.product-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 6px 16px;
+  border-radius: 50px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  text-transform: uppercase;
+}
+
+/* --- Image Container --- */
+.product-img-container {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.product-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-img-container img {
+  transform: scale(1.1);
+}
+
+/* --- Info Section --- */
+.product-info {
+  padding: 30px 25px;
+  text-align: center;
+}
+
+/* --- Product Title Link (Button Style) --- */
+.product-title-link {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #f8fafc; /* Default Gray */
+  color: #1e293b !important; /* Force color to stay dark */
+  font-weight: 600;
+  font-size: 1.15rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  text-decoration: none; /* Underline remove kiya */
+}
+
+/* Card hover karne par Link button yellow ho jayega */
+.product-card:hover .product-title-link {
+  background-color: #ffcc00;
+  color: #000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3);
+}
+
+/* Link par direct hover karne par thoda bright effect */
+.product-title-link:hover {
+  filter: brightness(1.05);
+}
+
+.product-desc {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  height: 50px; 
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* --- Tags/Pills --- */
+.product-tags {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tag-pill {
+  background: #f8fafc;
+  color: #64748b;
+  padding: 6px 15px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid #e2e8f0;
+  transition: 0.3s;
+}
+
+.product-card:hover .tag-pill {
+  border-color: #ffcc00;
+  background-color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .main-heading { font-size: 2.2rem; }
+  .products-section { padding: 60px 5%; }
+}
+
+@media (max-width: 768px) {
+  .product-card { max-width: 400px; margin: 0 auto; }
+}

@@ -1,0 +1,105 @@
+.hero-container {
+  height: 60vh; /* Puri screen cover karega */
+  width: 100%;
+  /* Yahan apni image ka path daalein */
+  background: url('./img.jpeg') no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  align-items: flex-end; /* Text ko bottom mein lane ke liye */
+}
+
+.hero-overlay {
+  /* Niche se upar ki taraf halka black gradient taaki text visible ho */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 60%, transparent 100%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 100px 100px; /* Left-Right 100px aur Bottom se 100px upar */
+}
+
+.hero-content {
+  max-width: 800px;
+  animation: fadeInUp 1s ease-out; /* Smooth entry animation */
+}
+
+.hero-title {
+  font-size: 4rem; /* Badi aur bold heading */
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.highlight-yellow {
+  color: #ffcc00; /* Aapka brand yellow color */
+  font-weight: 600;
+}
+
+/* Buttons Styling */
+.btn-primary-yellow {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 12px 35px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary-yellow:hover {
+  background-color: #e6b800;
+  transform: translateY(-3px);
+}
+
+.btn-outline-white {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 12px 35px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  backdrop-filter: blur(5px);
+}
+
+.btn-outline-white:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-overlay {
+    padding: 0 30px 60px;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+}

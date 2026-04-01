@@ -1,0 +1,120 @@
+.waaree-details-section {
+  padding: 80px 8%;
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.waaree-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Image Box with Hover --- */
+.waaree-image-box {
+  flex: 1.2;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.waaree-image-box img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.waaree-image-box img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Info Box --- */
+.waaree-info-box {
+  flex: 1;
+  text-align: left;
+}
+
+.waaree-main-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.waaree-intro-text {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* --- Specs Table --- */
+.waaree-specs-table {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.waaree-spec-row {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.waaree-spec-row:last-child {
+  border-bottom: none;
+}
+
+.waaree-check-icon {
+  color: #1e293b;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.waaree-spec-text {
+  font-size: 0.95rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+/* --- Pricing & Button --- */
+.waaree-pricing {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 25px;
+}
+
+/* Green color for Waaree as per screenshot */
+.waaree-price-green {
+  color: #22c55e; 
+}
+
+.waaree-get-quote-btn {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 12px 35px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.waaree-get-quote-btn:hover {
+  background-color: #e6b800;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .waaree-container { flex-direction: column; }
+  .waaree-info-box { text-align: center; }
+  .waaree-spec-row { justify-content: center; }
+}

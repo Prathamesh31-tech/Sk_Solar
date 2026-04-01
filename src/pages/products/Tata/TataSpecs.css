@@ -1,0 +1,106 @@
+.specs-section {
+  padding: 80px 10%;
+  background-color: #fcfcfc;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* --- Reason Cards --- */
+.reasons-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+
+.reason-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  border: 1px solid #f1f5f9;
+}
+
+.reason-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.reason-card h3 {
+  font-size: 1.4rem;
+  color: #1e293b;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.reason-card p {
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* --- Technical Specs Table --- */
+.tech-specs-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.specs-table-container {
+  overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specs-table tr {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.specs-table tr:last-child {
+  border-bottom: none;
+}
+
+.specs-table td {
+  padding: 18px 25px;
+  font-size: 1rem;
+}
+
+.spec-label {
+  font-weight: 700;
+  color: #1e293b;
+  background-color: #ffffff;
+  width: 40%;
+}
+
+.spec-value {
+  color: #475569;
+  font-weight: 500;
+}
+
+.specs-table tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-heading { font-size: 1.8rem; }
+  .reason-card { width: 100%; }
+  .spec-label { width: 50%; }
+  .specs-section { padding: 60px 20px; }
+}

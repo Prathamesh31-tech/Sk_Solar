@@ -1,0 +1,95 @@
+.process-stats-section {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* --- Process Part (White BG) --- */
+.process-container {
+  padding: 80px 10%;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.process-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 60px;
+}
+
+.steps-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.step-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #ffcc00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+}
+
+.step-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+/* --- Stats Part (Dark BG) --- */
+.stats-container {
+  background-color: #0c0c0c; /* Exact dark shade from screenshot */
+  padding: 80px 10%;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-value {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffcc00; /* Yellow stats */
+  margin: 0;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .process-title { font-size: 2rem; }
+  .step-circle { width: 60px; height: 60px; font-size: 1.5rem; }
+  .stat-value { font-size: 2.2rem; }
+  .stats-container { padding: 60px 20px; }
+}

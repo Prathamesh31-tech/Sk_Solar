@@ -1,0 +1,28 @@
+.main-footer {
+  background-color: #1a1e23; /* Dark Navy/Black shade from screenshot */
+  padding: 30px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05); /* Subtle separator */
+}
+
+.footer-content p {
+  color: #ffffff; /* Pure white text */
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 0;
+  text-align: center;
+  opacity: 0.9; /* Slight transparency for a professional look */
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .footer-content p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+}
