@@ -4,8 +4,8 @@ import "./AdaniDetails.css";
 const AdaniDetails = () => {
   const specs = [
     "High Efficiency (19% - 22%)",
-    "Advanced Mono PERC Technology",
-    "Long Performance Warranty (25 Years)",
+    "Ad Mono PERC Technology",
+    "low Performance Warranty",
     "Weather Resistant Design",
   ];
 

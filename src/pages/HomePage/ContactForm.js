@@ -9,15 +9,45 @@ const ContactForm = () => {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Yahan aapka Backend API call aayega
-    console.log("Form Data Submitted:", formData);
-    alert("Quote Request Sent Successfully!");
+
+    try {
+      setLoading(true);
+
+      const res = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        alert("✅ Quote Request Sent Successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        alert("❌ Error: " + data.message);
+      }
+    } catch (error) {
+      alert("❌ Server Error");
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -71,7 +101,7 @@ const ContactForm = () => {
           </div>
 
           <button type="submit" className="submit-btn">
-            Request a Quote
+            {loading ? "Sending..." : "Request a Quote"}
           </button>
         </form>
       </div>

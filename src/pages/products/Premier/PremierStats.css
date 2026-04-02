@@ -1,0 +1,73 @@
+.premier-stats-section {
+  padding: 80px 10%;
+  background-color: #ececec; /* Light bluish-grey background as per screenshot */
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* --- Stats Grid --- */
+.stats-grid-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto 80px; /* Stats aur niche ke text ke beech gap */
+  flex-wrap: wrap;
+  gap: 40px;
+
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 200px;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a8754; /* Exact Green from screenshot */
+  margin-bottom: 10px;
+}
+
+.stat-desc {
+  font-size: 1.1rem;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+/* --- Why Choose Content --- */
+.premier-why-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.why-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.why-subtitle {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.7;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .stat-number {
+    font-size: 2.2rem;
+  }
+  .why-title {
+    font-size: 1.8rem;
+  }
+  .why-subtitle {
+    font-size: 1rem;
+  }
+  .premier-stats-section {
+    padding: 60px 20px;
+  }
+}

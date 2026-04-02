@@ -1,0 +1,98 @@
+.solar-page-section {
+  padding: 80px 5%;
+  background-color: #f8fafc;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.section-header {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 40px;
+}
+
+/* --- Process Boxes --- */
+.process-wrapper {
+  margin-bottom: 80px;
+}
+
+.process-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.process-box {
+  background-color: #eff3f8; /* Screenshot wala light grey-blue tint */
+  padding: 35px 25px;
+  border-radius: 12px;
+  width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.process-box h3 {
+  font-size: 1.2rem;
+  color: #1e293b;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.process-box p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* --- Benefits Cards --- */
+.benefits-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.benefit-card {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 380px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  border: 1px solid #f1f5f9;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.benefit-icon {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+  font-size: 1.4rem;
+  color: #1e293b;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.benefit-card p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1200px) {
+  .benefit-card { width: 320px; }
+}
+
+@media (max-width: 768px) {
+  .section-header { font-size: 1.8rem; }
+  .process-box, .benefit-card { width: 100%; max-width: 400px; }
+  .solar-page-section { padding: 60px 20px; }
+}

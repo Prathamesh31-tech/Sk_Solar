@@ -29,7 +29,7 @@ const AboutServices = () => {
 
   return (
     <section className="about-services-section">
-      <h2 className="services-heading">Our Solar Services</h2>
+      <h2 className="services-heading">Our Services</h2>
 
       <div className="services-container">
         {services.map((service) => (

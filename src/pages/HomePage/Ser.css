@@ -120,4 +120,8 @@
 @media (max-width: 768px) {
   .services-section { padding: 60px 20px; }
   .service-card { padding: 30px 20px; }
+  .services-main-title {
+  font-size: 2rem;
+
+}
 }

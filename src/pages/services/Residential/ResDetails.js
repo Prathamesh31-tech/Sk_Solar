@@ -1,13 +1,12 @@
 import React from "react";
-import "./TataDetails.css";
+import "./ResDetails.css";
 
-const TataDetails = () => {
+const ResDetails = () => {
   const specs = [
-    "Efficiency: 19% - 22%",
-    "Technology:Mono TOPCon",
-    "25 Years Performance",
-    "Strong Build Quality",
-    "Made in India",
+    "Custom System Design",
+    " 24/7 Monitoring System",
+    "Maintenance & Support",
+    " Government Subsidy Assistance",
   ];
 
   return (
@@ -20,11 +19,12 @@ const TataDetails = () => {
 
         {/* Right Side: Content & Specs */}
         <div className="product-info-box">
-          <h2 className="product-main-title">Tata Power Solar Panels</h2>
+          <h2 className="product-main-title">Residential Solar</h2>
           <p className="product-intro-text">
-            Tata Power Solar is a leading solar manufacturer in India offering
-            high-quality, durable, and efficient solar panels for residential,
-            commercial, and industrial use.
+            Our residential solar systems are designed to help homeowners reduce
+            electricity bills while contributing to a cleaner environment. We
+            provide complete end-to-end solutions from design to installation
+            and maintenance.
           </p>
 
           <div className="specs-table">
@@ -36,15 +36,11 @@ const TataDetails = () => {
             ))}
           </div>
 
-          <h3 className="product-pricing">
-            Starting from <span className="price-yellow">₹45,000*</span>
-          </h3>
-
-          <button className="get-quote-btn">Get Quote</button>
+          <button className="get-quote-btn">Get Free Consultation</button>
         </div>
       </div>
     </section>
   );
 };
 
-export default TataDetails;
+export default ResDetails;

@@ -80,4 +80,8 @@
     width: 100%;
     max-width: 400px;
   }
+  .services-heading {
+  font-size: 2rem;
+
+}
 }

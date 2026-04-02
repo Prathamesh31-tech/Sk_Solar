@@ -11,11 +11,11 @@ import Projects from "./pages/Project/Projects";
 import Tata from "./pages/products/Tata/Tata";
 import Waaree from "./pages/products/Waaree/Waaree";
 import Adani from "./pages/products/Adani/Adani";
-import Premier from "./pages/products/Premier";
-import UTL from "./pages/products/UTL";
+import Premier from "./pages/products/Premier/Premier";
+import UTL from "./pages/products/UTL/UTL";
 
 // Services
-import Residential from "./pages/services/Residential";
+import Residential from "./pages/services/Residential/Residential";
 import Commercial from "./pages/services/Commercial";
 import Maintenance from "./pages/services/Maintenance";
 import Industrial from "./pages/services/Industrial";

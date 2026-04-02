@@ -98,5 +98,4 @@
 @media (max-width: 991px) {
   .adani-container { flex-direction: column; text-align: center; }
   .adani-info-box { text-align: center; }
-  .adani-spec-item { justify-content: center; }
 }

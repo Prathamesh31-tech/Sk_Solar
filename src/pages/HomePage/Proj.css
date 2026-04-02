@@ -95,4 +95,8 @@
 @media (max-width: 768px) {
   .projects-section { padding: 60px 20px; }
   .project-card-title { font-size: 1.2rem; }
+  .projects-title {
+  font-size: 1.8rem;
+
+}
 }

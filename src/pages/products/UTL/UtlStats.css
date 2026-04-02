@@ -1,0 +1,87 @@
+.utl-stats-section {
+  padding: 80px 10%;
+  background-color: #f8fafc; /* Screenshot jaisa light greyish background */
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* --- Stats Cards Grid --- */
+.utl-stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 80px; /* Niche ke text se gap */
+  flex-wrap: wrap;
+}
+
+.utl-stat-card {
+  background-color: #ffffff;
+  padding: 50px 30px;
+  border-radius: 20px;
+  width: 350px;
+  /* Premium Soft Shadow */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #f1f5f9;
+}
+
+.utl-stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+}
+
+.utl-stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b; /* Dark Navy shade */
+  margin-bottom: 10px;
+}
+
+.utl-stat-label {
+  font-size: 1rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+/* --- Bottom Why Choose Section --- */
+.utl-why-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.utl-why-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.utl-why-text {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.7;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+/* --- Mobile View --- */
+@media (max-width: 768px) {
+  .utl-stat-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 20px;
+  }
+  .utl-why-title {
+    font-size: 1.8rem;
+  }
+  .utl-why-text {
+    font-size: 1rem;
+  }
+  .utl-stats-section {
+    padding: 60px 20px;
+  }
+}

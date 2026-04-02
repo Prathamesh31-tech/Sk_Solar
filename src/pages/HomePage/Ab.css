@@ -132,4 +132,8 @@
     max-width: 450px;
     padding: 40px 25px;
   }
+  .about-title {
+  font-size: 2rem;
+
+}
 }

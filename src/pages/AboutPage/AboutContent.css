@@ -113,4 +113,10 @@
     transform: translateX(50%);
     bottom: -30px;
   }
+  .about-paragraph {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+
+}
 }

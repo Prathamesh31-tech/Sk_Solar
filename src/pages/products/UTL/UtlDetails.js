@@ -1,12 +1,12 @@
 import React from "react";
-import "./WaareeDetails.css";
+import "./UtlDetails.css";
 
-const WaareeDetails = () => {
+const UtlDetails = () => {
   const specs = [
-    "Efficiency: Up to 21%",
-    "Technology: Mono PERC ",
-    "Warranty: 25 Years",
-    "Strong & Durable Panels",
+    "High Conversion Efficiency",
+    " Budget-Friendly Solutions ",
+    "Durable Build Quality",
+    "20-25 Years Performance",
     "Budget Friendly",
   ];
 
@@ -20,11 +20,12 @@ const WaareeDetails = () => {
 
         {/* Right Side: Content & Specs */}
         <div className="waaree-info-box">
-          <h2 className="waaree-main-title">Waaree Solar</h2>
+          <h2 className="waaree-main-title">UTL Solar</h2>
           <p className="waaree-intro-text">
-            Waaree Solar is one of India's largest solar panel manufacturers,
-            offering reliable, cost-effective, and high-performance solar
-            solutions for homes, businesses, and industries.
+            UTL Solar is a trusted name in solar energy solutions, known for its
+            cost-effective and efficient solar panels. Ideal for residential and
+            commercial applications, UTL ensures reliable power with advanced
+            technology and long-lasting performance.
           </p>
 
           <div className="waaree-specs-table">
@@ -47,4 +48,4 @@ const WaareeDetails = () => {
   );
 };
 
-export default WaareeDetails;
+export default UtlDetails;
