@@ -31,6 +31,7 @@ import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
+  console.log(token);
 
   return (
     <Router>
