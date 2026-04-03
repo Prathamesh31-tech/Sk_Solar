@@ -1,139 +1,164 @@
-/* Container Fix (Responsive spacing) */
-.about-section {
-  padding: 80px 10%; /* Left-right 10% spacing */
-  background-color: #f8fafc;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  overflow: hidden; /* For smooth animations */
+.about-modern {
+  padding: 100px 8%;
+  background: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
 }
 
-/* Header Spacing */
-.about-header {
-  margin-bottom: 60px;
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
 }
 
-.about-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #1e293b;
-  margin-bottom: 10px;
-}
-
-.yellow-dash {
-  width: 60px;
-  height: 4px;
-  background-color: #ffcc00;
-  margin: 0 auto 25px;
-  border-radius: 5px;
-}
-
-.about-subtitle {
-  color: #64748b;
-  max-width: 750px;
-  margin: 0 auto;
-  line-height: 1.7;
-  font-size: 1.15rem;
-}
-
-/* Cards Flex Container */
-.about-container {
+/* Left Visual Side */
+.about-visual {
+  position: relative;
   display: flex;
   justify-content: center;
-  gap: 30px; /* Space between cards */
-  flex-wrap: wrap;
-  padding: 20px 0;
+  align-items: center;
 }
 
-/* Individual Card (Modern Glassmorphism look) */
-.about-card {
-  background: #ffffff;
-  padding: 50px 35px;
-  border-radius: 20px;
-  width: 360px;
-  /* Soft premium shadow */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-  
-  /* POSITION RELATIVE: Yeh sabse zaruri hai top-border ke liye */
-  position: relative;
-  overflow: hidden; /* Border ko card ke andar rakhne ke liye */
-  
-  /* Smooth transitions */
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
-              box-shadow 0.4s ease-in-out;
-  
+.exp-circle {
+  width: 300px;
+  height: 300px;
+  background: #1a1a1a;
+  color: white;
+  border-radius: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  cursor: pointer;
+  z-index: 2;
+  box-shadow: 20px 20px 0px #facc15; /* Yellow Accent */
 }
 
-/* --- THE HOVER TRICK (Yellow Top Border Animation) --- */
-.about-card::before {
-  content: '';
+.exp-circle .number {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #facc15;
+}
+
+.exp-circle .text {
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.visual-deco {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* Puri width */
-  height: 0px; /* Shuru mein height zero */
-  background-color: #ffcc00; /* Yellow color */
-  border-radius: 20px 20px 0 0; /* Card ke top corner jaisi shape */
-  
-  /* Smooth border grow animation */
-  transition: height 0.3s ease-in-out; 
-  z-index: 1; /* Taaki content se upar dikhe */
+  width: 400px;
+  height: 400px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  z-index: 1;
 }
 
-/* --- THE ACTIVE HOVER STATE --- */
-.about-card:hover {
-  /* 1. Card Moves Up slightly */
-  transform: translateY(-12px); 
-  
-  /* 2. Stronger shadow on hover */
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+/* Right Content Side */
+.brand-tag {
+  color: #facc15;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 15px;
+  display: inline-block;
+  border-bottom: 2px solid #facc15;
 }
 
-/* 3. Border grows to 6px on hover */
-.about-card:hover::before {
-  height: 6px; 
-}
-
-/* Card Content Fix (Taaki border top se overlap na kare) */
-.card-icon {
-  font-size: 45px;
+.about-main-title {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #1a1a1a;
   margin-bottom: 25px;
-  position: relative;
-  z-index: 2; /* Content top-border ke piche chupa rahe */
 }
 
-.card-title {
-  font-size: 1.5rem;
+.about-main-title span {
+  color: #facc15;
+}
+
+.about-para {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* Story List Style */
+.story-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.story-item {
+  display: flex;
+  gap: 20px;
+}
+
+.story-dot {
+  width: 12px;
+  height: 12px;
+  background: #ddd;
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.story-dot.highlight {
+  background: #facc15;
+}
+
+.story-text h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #1a1a1a;
+}
+
+.story-text p {
+  color: #777;
+  font-size: 0.95rem;
+}
+
+.read-more-btn {
+  background: #1a1a1a;
+  color: white;
+  padding: 15px 35px;
+  border: none;
   font-weight: 600;
-  color: #1e293b;
-  margin-bottom: 18px;
-  position: relative;
-  z-index: 2;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.card-desc {
-  color: #64748b;
-  font-size: 1rem;
-  line-height: 1.6;
-  position: relative;
-  z-index: 2;
+.read-more-btn:hover {
+  background: #facc15;
+  color: #000;
 }
 
-/* Mobile Responsive */
-@media (max-width: 991px) {
-  .about-section {
-    padding: 60px 5%;
+/* --- Mobile View --- */
+@media (max-width: 968px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 50px;
   }
-  .about-card {
-    width: 100%;
-    max-width: 450px;
-    padding: 40px 25px;
+  
+  .about-visual {
+    order: 2;
   }
-  .about-title {
-  font-size: 2rem;
 
-}
+  .exp-circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .story-item {
+    text-align: left;
+  }
+
+  .about-main-title {
+    font-size: 2.2rem;
+  }
 }

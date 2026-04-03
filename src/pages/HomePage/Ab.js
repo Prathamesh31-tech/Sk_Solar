@@ -1,53 +1,62 @@
 import React from "react";
 import "./Ab.css";
+import { useNavigate } from "react-router-dom";
 
 const Ab = () => {
-  const aboutCards = [
-    {
-      id: 1,
-      title: "10+ Years Experience",
-      desc: "Delivering excellence in solar energy solutions since our inception",
-      icon: "🏆", // Yahan image tag use kar sakte hain
-      highlight: true,
-    },
-    {
-      id: 2,
-      title: "Our Mission",
-      desc: "Clean & Green Energy for a sustainable future",
-      icon: "🏆",
-      highlight: false,
-    },
-    {
-      id: 3,
-      title: "Our Vision",
-      desc: "A Brighter Tomorrow powered by renewable energy",
-      icon: "🏆",
-      highlight: false,
-    },
-  ];
+  const navigate = useNavigate(); // Hook initialize karein
 
+  const handleNavigation = () => {
+    navigate("/about"); // Aapke contact page ka path yahan aayega
+    window.scrollTo(0, 0); // Page ke upar scroll karne ke liye
+  };
   return (
-    <section className="about-section">
-      <div className="about-header">
-        <h2 className="about-title">About SK Solar</h2>
-        <div className="yellow-dash"></div>
-        <p className="about-subtitle">
-          SK Solar is a trusted solar panel vendor offering high quality solar
-          solutions for residential, commercial, and industrial applications.
-        </p>
-      </div>
-
-      <div className="about-container">
-        {aboutCards.map((card) => (
-          <div
-            key={card.id}
-            className={`about-card ${card.highlight ? "border-yellow" : ""}`}
-          >
-            <div className="card-icon">{card.icon}</div>
-            <h3 className="card-title">{card.title}</h3>
-            <p className="card-desc">{card.desc}</p>
+    <section className="about-modern">
+      <div className="about-wrapper">
+        {/* Left Side: Big Visual Experience */}
+        <div className="about-visual">
+          <div className="exp-circle">
+            <span className="number">12+</span>
+            <span className="text">
+              Years of <br /> Excellence
+            </span>
           </div>
-        ))}
+          <div className="visual-deco"></div>
+        </div>
+
+        {/* Right Side: Content & Story */}
+        <div className="about-info">
+          <div className="brand-tag">About SK Solar</div>
+          <h2 className="about-main-title">
+            Driving the <span>Solar Revolution</span> across Maharashtra.
+          </h2>
+          <p className="about-para">
+            SK Solar is a trusted name in high-quality solar solutions. We don't
+            just install panels; we build sustainable futures for residential
+            and industrial sectors.
+          </p>
+
+          <div className="story-list">
+            <div className="story-item">
+              <div className="story-dot"></div>
+              <div className="story-text">
+                <h4>Our Mission</h4>
+                <p>Clean & Green Energy for every household and industry.</p>
+              </div>
+            </div>
+
+            <div className="story-item">
+              <div className="story-dot highlight"></div>
+              <div className="story-text">
+                <h4>Our Vision</h4>
+                <p>A brighter tomorrow powered by 100% renewable energy.</p>
+              </div>
+            </div>
+          </div>
+
+          <button className="read-more-btn" onClick={handleNavigation}>
+            Discover Our Journey
+          </button>
+        </div>
       </div>
     </section>
   );
