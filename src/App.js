@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -20,30 +22,180 @@ import Commercial from "./pages/services/Commercial";
 import Maintenance from "./pages/services/Maintenance";
 import Industrial from "./pages/services/Industrial";
 
+import ScrollToTop from "./ScrollToTop";
+
+// Admin
+import AdminLogin from "./pages/admin/AdminLogin";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import PrivateRoute from "./components/PrivateRoute";
+
 function App() {
+  const [token, setToken] = useState(localStorage.getItem("token"));
+
   return (
     <Router>
-      <Navbar />
+      <ScrollToTop />
+
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
+        {/* 🌐 Public Pages */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Home />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/about"
+          element={
+            <>
+              <Navbar />
+              <About />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/projects"
+          element={
+            <>
+              <Navbar />
+              <Projects />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/contact"
+          element={
+            <>
+              <Navbar />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
 
         {/* Products */}
-        <Route path="/tata" element={<Tata />} />
-        <Route path="/waaree" element={<Waaree />} />
-        <Route path="/adani" element={<Adani />} />
-        <Route path="/premier" element={<Premier />} />
-        <Route path="/utl" element={<UTL />} />
+        <Route
+          path="/tata"
+          element={
+            <>
+              <Navbar />
+              <Tata />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/waaree"
+          element={
+            <>
+              <Navbar />
+              <Waaree />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/adani"
+          element={
+            <>
+              <Navbar />
+              <Adani />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/premier"
+          element={
+            <>
+              <Navbar />
+              <Premier />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/utl"
+          element={
+            <>
+              <Navbar />
+              <UTL />
+              <Footer />
+            </>
+          }
+        />
 
         {/* Services */}
-        <Route path="/residential" element={<Residential />} />
-        <Route path="/commercial" element={<Commercial />} />
-        <Route path="/maintenance" element={<Maintenance />} />
-        <Route path="/industrial" element={<Industrial />} />
+        <Route
+          path="/residential"
+          element={
+            <>
+              <Navbar />
+              <Residential />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/commercial"
+          element={
+            <>
+              <Navbar />
+              <Commercial />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/maintenance"
+          element={
+            <>
+              <Navbar />
+              <Maintenance />
+              <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/industrial"
+          element={
+            <>
+              <Navbar />
+              <Industrial />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* 🔐 Admin Login */}
+        <Route path="/admin" element={<AdminLogin setToken={setToken} />} />
+
+        {/* 🔒 Protected Dashboard */}
+        <Route
+          path="/admin/dashboard"
+          element={
+            <PrivateRoute>
+              <AdminDashboard />
+            </PrivateRoute>
+          }
+        />
       </Routes>
-      <Footer />
     </Router>
   );
 }

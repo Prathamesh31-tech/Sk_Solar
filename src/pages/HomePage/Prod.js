@@ -45,7 +45,7 @@ const Prod = () => {
   ];
 
   return (
-    <section className="products-section">
+    <section className="products-section" id="products">
       <div className="section-header">
         <h2 className="main-heading">Our Solar Products</h2>
         <div className="yellow-dash"></div>

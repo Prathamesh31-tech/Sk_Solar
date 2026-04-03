@@ -44,6 +44,8 @@
   outline: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   background-color: #fff;
+  color: #000 !important; 
+
 }
 
 /* Input Focus Effect (Blue glow from your screenshot) */
